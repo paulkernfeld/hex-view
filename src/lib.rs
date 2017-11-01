@@ -19,13 +19,14 @@
 //! assert_eq!(format!("{:X}", HexView::from(&ff00_vec)), "FF00")
 //! ```
 
+#![no_std]
 #![deny(missing_docs)]
 #![deny(warnings)]
 
-use std::fmt;
-use std::fmt::{Formatter, LowerHex, UpperHex};
+use core::fmt;
+use core::fmt::{Formatter, LowerHex, UpperHex};
 
-/// This struct can be formatted with the `std::fmt::LowerHex` and `std::fmt::UpperHex` formatting
+/// This struct can be formatted with the `core::fmt::LowerHex` and `core::fmt::UpperHex` formatting
 /// traits.
 pub struct HexView<'a> {
     bytes: &'a [u8],
