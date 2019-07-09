@@ -1,6 +1,7 @@
 # hex-view
 
-## `HexView`
+*NOTE:* As of Rust 1.26.0, this crate is no longer necessary because an `&[u8]` can be
+formatted as hex using the `:x?` and `:X?` formatters.
 
 Easily format a `&[u8]` as hex.
 
